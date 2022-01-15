@@ -1,0 +1,85 @@
+.search-bar {
+  margin-top: 15rem;
+  margin-right: 10rem;
+}
+
+.inputSearch {
+  height: 5rem;
+  width: 33.5rem;
+  border: 0.2rem solid chocolate;
+  border-radius: 2.125rem;
+  padding: 0.625rem;
+  font-size: 2rem;
+  &:focus {
+    outline: none;
+  }
+}
+
+table {
+  display: block;
+  border-radius: 0.625rem;
+  border-bottom: 0.1rem solid black;
+  padding: 0 1.25rem;
+  max-height: 14rem;
+  cursor: pointer;
+  width: 33rem;
+  margin-left: 1.1rem;
+  border-radius: 0.625rem;
+  background-color: aliceblue;
+  box-shadow: 0 0.3125rem 1.25rem 0 rgba(206, 206, 206, 0.5);
+  tr {
+    td {
+      border-top: 0;
+      font-size: 2rem;
+      padding: 1rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &:hover {
+    background-color: #555555;
+    transition: 0.4s;
+    color: white;
+    &:not(.disable):hover {
+      background-color: #555555;
+      transition: 0.4s;
+      color: white;
+      /* apply hover effect here */
+    }
+  }
+}
+
+.active {
+  background-color: #555555;
+  transition: 0.4s;
+  color: white;
+}
+
+.changedValue {
+  background-color: gold;
+}
+.buttonr {
+  button {
+    margin-top: 5rem;
+    width: 13rem;
+    height: 6rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    background-color: antiquewhite;
+    color: chocolate;
+    cursor: pointer;
+    &:hover {
+      background-color: darkgray;
+      transition: 0.4s;
+      color: white;
+    }
+  }
+}
+
+h1 {
+  margin-top: 3.5rem;
+  font-size: 3rem;
+  color: chocolate;
+}

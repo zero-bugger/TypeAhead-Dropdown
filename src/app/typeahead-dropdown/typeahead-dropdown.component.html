@@ -1,0 +1,34 @@
+<div>
+  <h1>Insured Mine Angular Assessment (TypeAhead Dropdown)</h1>
+
+  <div class="search-bar">
+    <input
+      id="search"
+      class="inputSearch"
+      [(ngModel)]="inputValue"
+      autoComplete="off"
+      [ngClass]="{ changedValue: colorChange }"
+      (keydown)="onKeyPressed($event)"
+    />
+  </div>
+
+  <ng-container *ngIf="options$ | async as options">
+    <div *ngFor="let value of options; let i = index">
+      <table
+        *ngIf="showDropdown"
+        (click)="selectValue(value)"
+        [class.active]="i == arrowkeyLocation"
+      >
+        <div>
+          <tr>
+            <td>{{ value }}</td>
+          </tr>
+        </div>
+      </table>
+    </div>
+  </ng-container>
+
+  <div class="buttonr">
+    <button (click)="reset()">Reset</button>
+  </div>
+</div>
