@@ -21,7 +21,7 @@ export class TypeaheadDropdownComponent implements OnInit, AfterViewInit {
   inputValue: string = '';
   showDropdown: boolean = false;
   colorChange!: boolean;
-  arrowkeyLocation: number = 0;
+  arrowkeyLocation: number = -1;
   hover: boolean = true;
   mouseover: boolean = false;
 
@@ -80,7 +80,7 @@ export class TypeaheadDropdownComponent implements OnInit, AfterViewInit {
             : str.charAt(0).toUpperCase() + str.slice(1);
         this.showDropdown = false;
         this.colorChange = true;
-        this.arrowkeyLocation = 0;
+        this.arrowkeyLocation = -1;
         break;
     }
   }
